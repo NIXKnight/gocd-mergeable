@@ -38059,7 +38059,7 @@ async function preflight(serverUrl, accessToken, id, pluginId, filePaths) {
 
 function getFilePatterns() {
   return {
-    "yaml.config.plugin":                      ['**/*.gocd.yaml', '**/*.gocd.yml'],
+    "yaml.config.plugin":                      ['*.yaml'],
     "json.config.plugin":                      ['*.gopipeline.json', '*.goenvironment.json'],
     "cd.go.contrib.plugins.configrepo.groovy": ['**/*.gocd.groovy']
   }
