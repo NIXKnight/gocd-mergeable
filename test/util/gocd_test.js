@@ -17,7 +17,7 @@ describe('GoCD', function () {
       const scope = nock(serverUrl)
         .get(`/api/admin/config_repos/${configRepoId}`)
         .matchHeader("authorization", `bearer ${accessToken}`)
-        .matchHeader("accept", `application/vnd.go.cd.v2+json`)
+        .matchHeader("accept", `application/vnd.go.cd.v4+json`)
         .reply(200, {
           "id":            configRepoId,
           "plugin_id":     "json.config.plugin",
@@ -43,7 +43,7 @@ describe('GoCD', function () {
       const scope = nock(serverUrl)
         .get(`/api/admin/config_repos/${configRepoId}`)
         .matchHeader("authorization", `bearer ${accessToken}`)
-        .matchHeader("accept", `application/vnd.go.cd.v2+json`)
+        .matchHeader("accept", `application/vnd.go.cd.v4+json`)
         .reply(404, {
           message: {
             "message": "The specified config repository does not exists"
