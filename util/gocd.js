@@ -6,7 +6,7 @@ function fetch(serverUrl, accessToken, id) {
     url:     `${serverUrl}/api/admin/config_repos/${id}`,
     headers: {
       'Authorization': `bearer ${accessToken}`,
-      'Accept':        'application/vnd.go.cd.v2+json'
+      'Accept':        'application/vnd.go.cd.v4+json'
     }
   };
 
